@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+.header{
+    display: flex;
+    width: 100%;
+    height: max-content;
+
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    padding: 10px;
+
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.header h1{
+    color: rgb(255, 255, 255);
+}
+
+.header a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+
+.header .nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header .nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 15px;
+
+}
+
+.header .nav ul li{
+    display: flex;
+}
+
+.header .nav ul li a:hover{
+    color: orangered;
+    
+}
+
+.content{
+    display: flex;
+
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    margin-top: 50px;
+
+    padding: 10px 0 0;
+    background-color: rgb(0, 0, 0);
+    gap: 1px;
+}
+
+
+.contentA{
+    display: flex;
+    width: 100%;
+    height: max-content;
+
+    flex-direction: column;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.contentA .name{
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+
+    margin-bottom: 25px;
+}
+
+.contentA .text{
+    width: 300px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.contentB{
+    display: flex;
+    width: 70%;
+    height: 100%;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+section.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-top: 54px;
+}
+
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+
+}
+
+.slider-content input{
+    display: none;
+    
+}
+
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide-box .developer{
+    color: rgb(0, 0, 0);
+}
+
+.slide-box .developer h1{
+    margin-bottom: 15px;
+}
+
+.slide-box .developer p{
+    font-weight: 700;
+}
+
+.slide-box .design{
+    color: rgb(0, 0, 0);
+}
+
+.slide-box .design h1{
+    margin-bottom: 15px;
+}
+
+.slide-box .design p{
+    font-weight: 700;
+}
+
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+    
+}
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    gap: 1px;
+    background-color: rgb(0, 0, 0);
+    padding-top: 1px;
+}
+.container .box{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+.container .box h1{
+    display: flex;
+    position:absolute;
+    padding-left: 500px;
+    font-size: 200px;
+    margin-bottom: 200px;
+    overflow:hidden;
+    color: #222222;
+}
+
+.container .box .conteudo{
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+   
+    transition: 0.5s;
+}
+
+.container .box:hover .conteudo{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    padding-bottom: 50px;
+}
+
+.desc{
+    margin-top: 25px;
+    width: 200px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:900px){
+    .content{
+        flex-direction: column;
+    }    
+    .contentB{
+        display: flex;
+        width: 100%;
+    }
+
+    .container {
+        flex-direction:column ;
+    }
+
+    .container .box h1{
+      
+        padding-left: 900px;
+        font-size: 100px;
+        margin-bottom: 130px;
+        overflow:hidden;
+    }
+    .desc{
+        width: 230px;
+    } 
+   
+}
+
